@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.open-eshop.com/" />
+<title>DeleteUser</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DeleteUser</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/oc-panel/User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=search</td>
+	<td>RoccoR</td>
+</tr>
+<tr>
+	<td>sendKeysAndWait</td>
+	<td>name=search</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//td[.=&quot;RoccoR&quot;]/../td/../td/a[@class=&quot;btn btn-danger index-delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@class=&quot;sweet-alert showSweetAlert visible&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class=&quot;sweet-alert showSweetAlert visible&quot;]/button[@class=&quot;confirm&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.panel.panel-default&gt;div.panel-body</td>
+	<td>Name Email Logins Actions</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=search</td>
+	<td>RoccoR</td>
+</tr>
+<tr>
+	<td>sendKeysAndWait</td>
+	<td>name=search</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.panel.panel-default&gt;div.panel-body</td>
+	<td>Name Email Logins Actions</td>
+</tr>
+</tbody></table>
+</body>
+</html>
